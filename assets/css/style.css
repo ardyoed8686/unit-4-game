@@ -6,10 +6,17 @@
 
 h2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 5px;
     background-color: brown;
     color: #fff;
     padding: 2%;
-    width: 33%;
+    width: 27%;
+    margin: 10px;
+  }
+
+  .instructions {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: antiquewhite;
+    color:green;
+    padding: 2%;
     margin: 10px;
   }

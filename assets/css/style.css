@@ -20,3 +20,19 @@ h2 {
     padding: 2%;
     margin: 10px;
   }
+
+  #comp-guess {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color:lightgreen;
+    padding: 2%;
+    margin: 10px;
+    height: 100px;
+  }
+
+  #results {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: aqua;
+    padding: 2%;
+    margin: 10px;
+    height: 100px;
+  }

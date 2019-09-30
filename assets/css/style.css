@@ -37,7 +37,19 @@ h2 {
     height: 100px;
   }
 
-  /* .red-crystal { */
-    /* padding: 2%; */
-    /* height: 100px; */
-  /* } */
+ #Total-Score {
+    padding: 0%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: teal;
+    color: #fff;
+
+    font-size: 16px;
+ }
+
+ #player-score {
+    padding: 0%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: teal;
+    color: #fff;
+    font-size: 100px;
+ }

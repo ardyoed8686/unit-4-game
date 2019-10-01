@@ -25,12 +25,11 @@ var yellowCrystal = Math.floor(Math.random() * 11) + 1;
 var greenCrystal = Math.floor(Math.random() * 11) + 1;
 
 
-// $(".guessed-score").text(randomScore);
 
 
 
-
-// collect player score and displa it
+// collect player score and display it
+var yourPick = $(this).val();
 // if user score matches computer guess player wins
 // if user score is greater than computer guess player loss
 // after win/loss reset computer guess and crystal values to new variables

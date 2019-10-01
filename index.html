@@ -12,7 +12,7 @@
     <!-- link bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- jQuery file -->
+    <!-- jQuery Library -->
     <script
     src="http://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -51,7 +51,9 @@
     <div class="row">
         <div class="col-md-3">
             <div id="comp-guess" class="card">
-                <div class="card-body"></div>
+                <div class="card-body">
+                    <div id="guessed-score"></div>
+                </div>
             </div>
         </div>
         <div class="col-md-2">
@@ -110,7 +112,7 @@
         <div class="col-md-3">
             <div id="Total-Score" class="card">
                 <div class="card-body">
-                        <p>Your total score is:</p>  
+                        <p id="user-score">Your total score is:</p>  
                 </div>
             </div>
         </div>
@@ -129,6 +131,6 @@
 
 </div>
 
-    
+<script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>

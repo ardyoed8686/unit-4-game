@@ -28,7 +28,7 @@ console.log(greenCrystal);
 
 //if red-crystal is clicked  take points and add to userScore
 
-$(".crystal").on("click", function() {
+$("#red-crystal").on("click", function() {
     if (redCrystal) {
    // add crystal points to userScore
    userScore += (this.value);
@@ -38,10 +38,12 @@ $(".crystal").on("click", function() {
      // add crystal points to userScore
      userScore += (this.value);
      $("player-score").text(userScore);
+
     } else if (yellowCrystal) {
      // add crystal points to userScore
     userScore += (this.value);
     $("player-score").text(userScore);
+    
     } else if (greenCrystal) {
     // add crystal points to userScore
     userScore += (this.value);

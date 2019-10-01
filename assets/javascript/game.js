@@ -4,6 +4,7 @@ var userScore = 0;
 
 
 
+
 $(document).ready(function() {
 // computer guessed score between 19 - 120 points
 // var randomScore = Math.floor(Math.random() * 101) + 19;
@@ -25,10 +26,30 @@ console.log(yellowCrystal);
 var greenCrystal = Math.floor(Math.random() * 11) + 1;
 console.log(greenCrystal);
 
+//if red-crystal is clicked  take points and add to userScore
+
 $(".crystal").on("click", function() {
+    if (redCrystal) {
+   // add crystal points to userScore
+   userScore += (this.value);
+   $("player-score").text(userScore);
+
+    } else if (blueCrystal) {
+     // add crystal points to userScore
+     userScore += (this.value);
+     $("player-score").text(userScore);
+    } else if (yellowCrystal) {
+     // add crystal points to userScore
+    userScore += (this.value);
+    $("player-score").text(userScore);
+    } else if (greenCrystal) {
     // add crystal points to userScore
     userScore += (this.value);
     $("player-score").text(userScore);
+    }    
+
+             
+ 
 
 });
 

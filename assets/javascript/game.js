@@ -10,7 +10,7 @@ $(document).ready(function() {
  var compScore = Math.floor(Math.random() * 101) + 19;
 
 $("#comp-guess").text(compScore);
-
+console.log(compScore);
 
 // random value assigned to each crystal between 1 - 12
 var redCrystal = Math.floor(Math.random() * 11) + 1;
@@ -25,7 +25,7 @@ console.log(yellowCrystal);
 var greenCrystal = Math.floor(Math.random() * 11) + 1;
 console.log(greenCrystal);
 
-$("player-score").on("click", function() {
+$(".crystal").on("click", function() {
     // add crystal points to userScore
     userScore += (this.value);
     $("player-score").text(userScore);

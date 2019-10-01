@@ -1,6 +1,6 @@
 var wins = 0;
 var losses = 0;
-var userScore = [];
+var userScore = 0;
 
 
 
@@ -14,22 +14,28 @@ $("#comp-guess").text(compScore);
 
 // random value assigned to each crystal between 1 - 12
 var redCrystal = Math.floor(Math.random() * 11) + 1;
-
+console.log(redCrystal);
 
 var blueCrystal = Math.floor(Math.random() * 11) + 1;
-
+console.log(blueCrystal);
 
 var yellowCrystal = Math.floor(Math.random() * 11) + 1;
-
+console.log(yellowCrystal);
 
 var greenCrystal = Math.floor(Math.random() * 11) + 1;
+console.log(greenCrystal);
 
+$("player-score").on("click", function() {
+    // add crystal points to userScore
+    userScore += (this.value);
+    $("player-score").text(userScore);
 
+});
 
 
 
 // collect player score and display it
-var yourPick = $(this).val();
+var yourPick = $(this).value;
 // if user score matches computer guess player wins
 // if user score is greater than computer guess player loss
 // after win/loss reset computer guess and crystal values to new variables

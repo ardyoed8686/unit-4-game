@@ -26,45 +26,71 @@ console.log(yellowCrystal);
 var greenCrystal = Math.floor(Math.random() * 11) + 1;
 console.log(greenCrystal);
 
+var scoreCheck = function(){
+    // collect player score and display it
+
+// if user score matches computer guess player wins
+
+    if (compScore === userScore) {
+        $("#results").prepend("You win!");
+        wins++;
+        $("#wins").text(wins);
+        
+    
+    } else if (compScore < userScore) {
+        $("#results").prepend("You lose!");
+        losses++;
+        $("#losses").text(losses);
+    
+    }
+}
 //if red-crystal is clicked  take points and add to userScore
 
 $("#red-crystal").on("click", function() {
-    if (redCrystal) {
+
    // add crystal points to userScore
-   userScore += (this.value);
-   $("player-score").text(userScore);
-
-    } else if (blueCrystal) {
-     // add crystal points to userScore
-     userScore += (this.value);
-     $("player-score").text(userScore);
-
-    } else if (yellowCrystal) {
-     // add crystal points to userScore
-    userScore += (this.value);
-    $("player-score").text(userScore);
-    
-    } else if (greenCrystal) {
-    // add crystal points to userScore
-    userScore += (this.value);
-    $("player-score").text(userScore);
-    }    
-
-             
- 
-
+   
+   userScore += redCrystal;
+   console.log(userScore);
+  
+   $("#player-score").text(userScore);
+scoreCheck();
 });
 
 
 
-// collect player score and display it
-var yourPick = $(this).value;
-// if user score matches computer guess player wins
+$("#blue-crystal").on("click", function() {
+
+    // add crystal points to userScore
+    userScore += blueCrystal;
+    console.log(userScore);
+   
+    $("#player-score").text(userScore);
+    scoreCheck();
+ });
+
+ $("#yellow-crystal").on("click", function() {
+
+    // add crystal points to userScore
+    userScore += yellowCrystal;
+    console.log(userScore);
+   
+    $("#player-score").text(userScore);
+    scoreCheck();
+ });
+
+ $("#green-crystal").on("click", function() {
+
+    // add crystal points to userScore  
+    userScore += greenCrystal;
+    console.log(userScore);
+   
+    $("#player-score").text(userScore);
+    scoreCheck();
+ });
+
+
 // if user score is greater than computer guess player loss
 // after win/loss reset computer guess and crystal values to new variables
-});
 
-// $(document).ready(function(){
-    // $("button").click(function(){
-    //   $("p").text("Hello world!");
-    // });
+});
